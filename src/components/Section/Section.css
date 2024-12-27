@@ -1,0 +1,21 @@
+.section{
+
+}
+
+.section h3{
+    width: 27rem;
+    height: 4.375rem;
+    border-radius: 15px;
+    
+    align-content: center;
+    text-align: center;
+    font-family: 'Roboto',serif;
+    font-size: 32px;
+    font-weight: 800;
+    color: rgba(245, 245, 245, 1);
+}
+
+.video__container{
+    display: flex;
+    
+}

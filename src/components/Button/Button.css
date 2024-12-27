@@ -1,0 +1,15 @@
+
+.button {
+    font-family: "Source Sans 3", serif;
+    font-weight: 900;
+    font-size: 20px;
+    text-align: center;
+    align-content: center;
+    width: 11.258rem;
+    height: 3.375rem;
+    color:var(--Blue, rgba(34, 113, 209, 1));
+    border: 2px solid var(--Blue, rgba(34, 113, 209, 1));
+    border-radius: 10px;
+    box-shadow: 0px 0px 12px 4px rgba(34, 113, 209, 1) inset;
+
+}
