@@ -3,12 +3,12 @@
     display: flex;
     background-size: cover;
     background-position: center;
-    overflow: hidden;
     align-items: end;
     margin: 0;
     width: 90.159rem;
-    height: 52rem;
+    height: 46.5rem;
     z-index: 1;
+    border-bottom: 4px solid rgba(107, 209, 255, 1)
 }
 .banner::before {
     width: 90.159rem;
@@ -17,7 +17,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.5); /* Filtro de cor preta com opacidade de 50% */
+    background: rgba(0, 18, 51, 0.56); /* Filtro de cor preta com opacidade de 50% */
     z-index: 1; /* Garante que o overlay fique por cima da imagem */
 }
 .banner__content{

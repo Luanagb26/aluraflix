@@ -20,7 +20,7 @@
     width: 10.528rem;
     height: 2.5rem;
 }
-.button__container{
+.header__button__container{
     display: flex;
     width: 24.084rem;
     height: 3.375rem;
@@ -29,7 +29,7 @@
 
 }
 
-.button__container :nth-child(2){
+.header__button__container :nth-child(2){
     color:rgba(255, 255, 255, 1);
     border: 2px solid rgba(255, 255, 255, 1);
     box-shadow: none;

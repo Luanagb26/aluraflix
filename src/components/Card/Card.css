@@ -1,21 +1,28 @@
 .card{
-    width: 27.015rem;
+    width: 27.020rem;
     height: 19.995rem;
-    border-radius:15px;
-    border: solid rgba(107, 209, 255, 1);
+    box-sizing: border-box;
+    justify-content: center;
 }
 
-.button__container{
-    width: 26.875rem;
+.card iframe{
+    width: 27rem;
+    height: 16.303rem;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.card__button__container{
+    display: flex;
+    width: 27.4rem;
     height: 3.688rem;
     justify-content: center;
     gap: 4.375rem;
     background: rgba(0, 0, 0, 0.9);
     border-radius: 0px 0px 15px 15px;
-    box-shadow: 0px -4px 5px 3px rgba(107, 209, 255, 1) inset;
+
 }
 
-.button__container button{
+.button__card{
     display: flex;
     align-items: center;
     font-family: 'Roboto',serif;
@@ -27,7 +34,7 @@
     
 }
 
-.button__container button:nth-child(2){
+.button__card:nth-child(2){
     border: none;
 }
 
