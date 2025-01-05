@@ -1,8 +1,11 @@
 import './Input.css'
 
-const Input = (placeholder) => {
+const Input = ({children, placeholder, type = "text"}) => {
     return(
-        <input placeholder={placeholder}/>
+        <div className='input'>
+        <label className='input__label'>{children}</label>
+        <input placeholder={placeholder} type={type}/>
+        </div>
     )
 };
 

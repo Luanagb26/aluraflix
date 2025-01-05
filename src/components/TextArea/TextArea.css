@@ -1,4 +1,4 @@
-.input{
+.textArea{
     display: flex;
     flex-direction: column;
     color:rgba(255, 255, 255, 1);
@@ -9,20 +9,21 @@
     margin-bottom: 3.75rem;
 }
 
-.input__label{
+.textArea__label{
 
 }
 
-.input input{
+.textArea textarea{
+    resize: none;
     background-color: rgba(25, 25, 25, 1);
-    
     width: 35.813rem;
-    height: 3.875rem;
-    border-radius: 10px;
-    border: 3px solid rgba(38, 38, 38, 1);
+    height: 13.75rem;
+    border-radius: 15px;
+    border: 3px solid  rgba(38, 38, 38, 1);
 
     color:rgba(255, 255, 255, 1);
     font-size: 20px;
     font-weight: 600;
     line-height: 24px;
+
 }
