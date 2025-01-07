@@ -28,18 +28,22 @@ main{
 }
 
 .formulario__titulo__container{
-    width: 73.25rem;
+    width: 100%;
     height: 5.688rem;
     gap: 0.313rem;
-    border: 3px  solid rgba(38, 38, 38, 1);
-    
+    border: solid rgba(38, 38, 38, 1);
+    border-right: 0px;
+    border-left: 0px;
 }
 
 .formulario__titulo__container h2{
-
+    font-family: 'Source Sans 3', serif;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 24px;
 
 }
 
 .formulario__campo__container{
-
+    width: 73.25rem;
 }

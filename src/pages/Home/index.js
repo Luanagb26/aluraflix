@@ -1,5 +1,6 @@
 import Banner from '../../components/Banner';
 import Footer from '../../components/Footer'
+import Modal from '../../components/Modal';
 import Section from '../../components/Section';
 import { useState } from 'react';
 
@@ -40,6 +41,7 @@ export default function Home(){
                                         videos={videos.filter(video => video.categoria == categoria.nome)}
                                         />)}
           <Footer/>
+          <Modal/>
         </div>
       );
 }

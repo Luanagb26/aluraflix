@@ -1,6 +1,14 @@
+import { useState } from 'react';
+import Modal from '../Modal';
 import './Card.css'
 
 const Card = ({url,cor}) => {
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = () => {
+      setIsModalOpen(true);
+    };
 
     return(
 
@@ -15,10 +23,11 @@ const Card = ({url,cor}) => {
                         <img src='/assets/icon__trash.png' alt='Icone Lixeira'/>
                         DELETAR
                     </button>
-                    <button className='button__card'>
+                    <button className='button__card' onClick={openModal}>
                         <img src='/assets/icon__edit.png' alt='Icone Editar'/>
                         EDITAR
                     </button>
+                    <Modal open={isModalOpen} onClose={() => setIsModalOpen(false)}/>
                     </div>
         </div>
     )
