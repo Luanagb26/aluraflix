@@ -1,0 +1,20 @@
+{
+    "videos": [
+        {
+            "id": 1,
+            "categoria": "FRONT END",
+            "titulo": "SEO com React",
+            "descricao": "Eu to aqui pra nesse vídeo dizer que a gente vai aprender a começar uma app inspirada no desenho Pokémon com Nextjs e React, ver algumas dicas sobre performance e de quebra conhecer uma plataforma sensacional pra fazer deploy que é a Vercel. Tudo em 22 minutos nesse vídeo feito com todo o carinho do mundo construindo uma Pokedex! ",
+            "url": "https://www.youtube.com/embed/c8mVlakBESE?si=uWfDEOsJ_-NtqVPI",
+            "imagem": "https://www.youtube.com/embed/c8mVlakBESE?si=uWfDEOsJ_-NtqVPI"
+        },
+        {
+            "id": 2,
+            "categoria": "BACK END",
+            "titulo": "SEO com React",
+            "descricao": "Eu to aqui pra nesse vídeo dizer que a gente vai aprender a começar uma app inspirada no desenho Pokémon com Nextjs e React, ver algumas dicas sobre performance e de quebra conhecer uma plataforma sensacional pra fazer deploy que é a Vercel. Tudo em 22 minutos nesse vídeo feito com todo o carinho do mundo construindo uma Pokedex! ",
+            "url": "https://www.youtube.com/embed/c8mVlakBESE?si=uWfDEOsJ_-NtqVPI",
+            "imagem": "https://www.youtube.com/embed/c8mVlakBESE?si=uWfDEOsJ_-NtqVPI"
+        }
+    ]
+}

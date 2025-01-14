@@ -1,21 +1,22 @@
-import Card from '../Card';
-import './Section.css'
+import Card from "../Card";
+import "./Section.css";
 
-
-const Section = ({nome, cor,url}) => {
-    return(
-        <section className='section'>
-            <h3 style={{backgroundColor:`${cor}`}}>
-                {nome}
-            </h3>
-            <div className='video__container'>
-               <Card
-               key={nome}
-               cor={cor}
-               />
-            </div>
-        </section>
-    )
-}
+const Section = ({ nome, cor, videos }) => {
+  console.log(`Section: ${nome}`, videos); // Verificar os vídeos recebidos
+  return (
+    <section className="section">
+      <h3 style={{ backgroundColor: cor }}>{nome}</h3>
+      <div className="video__container">
+        {videos.map((video) => (
+          <Card key={video.id} {...video} cor={cor}/>
+        ))}
+      </div>
+    </section>
+  );
+};
 
 export default Section;
+
+//   {videos.map((video) => (
+// <Card {...video} key={video.id} />
+//))}

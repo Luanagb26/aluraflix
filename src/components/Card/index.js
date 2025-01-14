@@ -2,20 +2,21 @@ import { useState } from 'react';
 import Modal from '../Modal';
 import './Card.css'
 
-const Card = ({url,cor}) => {
+const Card = ({id ,url,cor}) => {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const openModal = () => {
       setIsModalOpen(true);
     };
-
+    
     return(
 
         <div className='card'>
             <iframe
                 style={{border:`solid ${cor}`, boxShadow: `0px 0px 17px 8px ${cor} inset`}}
                 src={url}
+                key={id}
             />
 
              <div className='card__button__container' style={{border:`5px, 5px, 5px, 5px solid ${cor}`, boxShadow: `0px -4px 5px 3px ${cor} inset`}}>
