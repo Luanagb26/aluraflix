@@ -16,7 +16,3 @@ const Section = ({ nome, cor, videos }) => {
 };
 
 export default Section;
-
-//   {videos.map((video) => (
-// <Card {...video} key={video.id} />
-//))}

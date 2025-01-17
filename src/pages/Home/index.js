@@ -4,23 +4,10 @@ import Modal from '../../components/Modal';
 import Section from '../../components/Section';
 import { useState } from 'react';
 import db from '../../json/db.json';
+import { categorias } from '../../context/categorias';
 
 export default function Home() {
 
-  const categorias = [
-    {
-      nome: "FRONT END",
-      cor: 'rgba(107, 209, 255, 1)',
-    },
-    {
-      nome: "BACK END",
-      cor: 'rgba(0, 200, 111, 1)',
-    },
-    {
-      nome: "MOBILE",
-      cor: 'rgba(255, 186, 5, 1)',
-    },
-  ]
   const [videos, setVideos] = useState(db.videos)
 
 
@@ -58,3 +45,4 @@ export default function Home() {
     </div>
   );
 }
+

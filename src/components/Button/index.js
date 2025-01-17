@@ -2,7 +2,7 @@ import './Button.css'
 
 const Button = (props) => {
     return(
-            <a className={`button ${props.isActive ? 'button--active' : ''}`}>{props.nome}</a>
+            < button className={`button ${props.isActive ? 'button--active' : ''}`}>{props.nome}</button>
     )
 }
 

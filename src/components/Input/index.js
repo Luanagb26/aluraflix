@@ -4,7 +4,7 @@ const Input = ({children, placeholder, type = "text", colorFundo = `rgba(25, 25,
     return(
         <div className='input'>
         <label className='input__label'>{children}</label>
-        <input placeholder={placeholder} type={type} style={{backgroundColor: `${colorFundo}`, border: `${colorBorda}`}}/>
+        <input placeholder={placeholder} required type={type} style={{backgroundColor: `${colorFundo}`, border: `${colorBorda}`}}/>
         </div>
     )
 };

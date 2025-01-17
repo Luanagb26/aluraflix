@@ -7,6 +7,7 @@
     align-content: center;
     width: 11.258rem;
     height: 3.375rem;
+    background-color: transparent;
     color:var(--Blue, rgba(34, 113, 209, 1));
     border: 2px solid var(--Blue, rgba(34, 113, 209, 1));
     border-radius: 10px;

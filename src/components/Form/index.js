@@ -1,6 +1,7 @@
 import './Form.css'
 import Input from "../Input";
 import TextArea from "../TextArea";
+import Select from "../Select"
 
 const Form = () => {
     return(
@@ -14,7 +15,7 @@ const Form = () => {
                 Título
             </Input>
 
-            <select/>
+            <Select placeholder="selecione uma categoria">Categoria</Select>
 
             <Input 
             placeholder='valorAntigoooo' 

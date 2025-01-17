@@ -1,8 +1,8 @@
 import Input from '../../components/Input';
-//import ListaSupensa from '../../components/ListaSuspensa'
 import TextArea from '../../components/TextArea';
-import Button from '../../components/Button';
+import FormButton from '../../components/FormButton';
 import './NovoVideo.css';
+import Select from '../../components/Select';
 
 export default function NovoVideo(){
     return(
@@ -20,14 +20,14 @@ export default function NovoVideo(){
           
            <div className='formulario__campo__container'>
                 <Input placeholder="Digite o título">Título</Input>
-                {/*<ListaSupensa placeholder="Selecione uma categoria" label = "Categoria"></ListaSupensa>*/}
+                <Select placeholder="selecione uma categoria">Categoria</Select>
                 <Input placeholder="Insira a url da imagem">Imagem</Input>
                 <Input placeholder="Insira a url do vídeo">Vídeo</Input>
                 <TextArea placeholder="Sobre o que é esse vídeo?">Descrição</TextArea>
            </div>
-           <div>
-               <Button nome="GUARDAR"/>
-               <Button nome ="LIMPAR"/>
+           <div className='formulario__botao__container'>
+               <FormButton nome="GUARDAR"/>
+               <FormButton nome ="LIMPAR"/>
            </div>
            </form>
         </main>

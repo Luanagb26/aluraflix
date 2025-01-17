@@ -1,0 +1,21 @@
+
+.formButton {
+    font-family: "Source Sans 3", serif;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    align-content: center;
+    width: 11.258rem;
+    height: 3.375rem;
+    background-color: transparent;
+    color:rgba(255, 255, 255, 1);
+    border: 2px solid rgba(245, 245, 245, 1);
+    box-shadow: none;
+    border-radius: 10px;
+}
+
+.formButton--active{
+   
+    
+}
