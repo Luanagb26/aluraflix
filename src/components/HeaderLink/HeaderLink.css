@@ -1,0 +1,9 @@
+.header__link{
+    display: flex;
+    width: 24.084rem;
+    height: 3.375rem;
+    gap: 1.563rem;
+    align-items: center;
+    text-decoration: none;
+
+}
