@@ -1,7 +1,7 @@
 import './Select.css';
 import { categorias } from '../../context/categorias';
 
-const Select = ({ children, placeholder,  colorFundo = `rgba(25, 25, 25, 1)`, colorBorda = `3px solid rgba(38, 38, 38, 1)` }) => {
+const Select = ({ value, onChange, children, placeholder,  colorFundo = `rgba(25, 25, 25, 1)`, colorBorda = `3px solid rgba(38, 38, 38, 1)` }) => {
     return (
         <div className="select">
             <label className="select__label">{children}</label>
@@ -9,6 +9,8 @@ const Select = ({ children, placeholder,  colorFundo = `rgba(25, 25, 25, 1)`, co
             defaultValue=""
             required
             style={{backgroundColor: `${colorFundo}`, border: `${colorBorda}`}}
+            value={value}
+            onChange={onChange}
             >
                 <option value="" disabled>
                     {placeholder}

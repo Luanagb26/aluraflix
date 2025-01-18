@@ -27,7 +27,7 @@ export default function Home() {
       {categorias.map((categoria) => {
         const videosFiltrados = videos.filter(
           (video) =>
-            video.categoria.trim().toLowerCase() === categoria.nome.trim().toLowerCase()
+            video.categoria === categoria.nome
         );
         console.log(`Categoria: ${categoria.nome}`, videosFiltrados);
         return (

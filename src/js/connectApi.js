@@ -6,8 +6,9 @@ async function listVideos() {
     return convertedConnection;
 }
 
-async function createVideo(titulo, imagem, url, categoria, descricao) {
+async function createVideo(titulo, categoria, imagem, url, descricao) {
     try{
+        
         const connection = await fetch("http://localhost:3000/videos", {
             method: "POST",
             headers: {
@@ -23,6 +24,7 @@ async function createVideo(titulo, imagem, url, categoria, descricao) {
         });
 
         const convertedConnection = await connection.json();
+        
         return convertedConnection;
     
     } catch(erro){

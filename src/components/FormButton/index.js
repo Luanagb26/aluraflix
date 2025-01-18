@@ -1,9 +1,14 @@
 import './FormButton.css'
 
-const FormButton = (props) => {
+const FormButton = ({type, isActive, nome}) => {
     return(
         <div>
-            < button className={`formButton ${props.isActive ? 'formButton--active' : ''}`}>{props.nome}</button>
+            < button 
+            className={`formButton ${isActive ? 'formButton--active' : ''}`}
+            type={type}
+            >
+                {nome}
+            </button>
         </div>
     )
 }

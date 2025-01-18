@@ -5,7 +5,7 @@ import NovoVideo from "./pages/NovoVideo";
 
 function AppRoutes() {
   return(
-    <BrowserRouter>
+    <BrowserRouter basename="/">
     <Header/>
     <Routes>
       <Route index element={<Home/>}/>
