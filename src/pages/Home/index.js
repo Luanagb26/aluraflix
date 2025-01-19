@@ -5,16 +5,30 @@ import Section from '../../components/Section';
 import { useState } from 'react';
 import db from '../../json/db.json';
 import { categorias } from '../../context/categorias';
+import { useEffect } from 'react';
+import { connectApi } from "../../js/connectApi";
 
 export default function Home() {
 
-  const [videos, setVideos] = useState(db.videos)
+  const [videos, setVideos] = useState([]);
 
+  
+  useEffect(() => {
+    async function fetchVideos() {
+      const response = await connectApi.listVideos();
+      setVideos(response);
+    }
 
-  const aoNovoVideoAdicionado = (video) => {
-    setVideos([...videos, video])
-  }
+    fetchVideos();
+  }, []);
 
+  const handleDeleteVideo = async (id) => {
+    await connectApi.deleteVideo(id);
+
+       // Atualiza o estado local removendo o vídeo deletado
+       setVideos((prevVideos) => prevVideos.filter((video) => video.id !== id));
+      };
+      
   return (
     <div className="App">
       <Banner
@@ -29,13 +43,13 @@ export default function Home() {
           (video) =>
             video.categoria === categoria.nome
         );
-        console.log(`Categoria: ${categoria.nome}`, videosFiltrados);
         return (
           <Section
             key={categoria.nome}
             nome={categoria.nome}
             cor={categoria.cor}
             videos={videosFiltrados}
+            onDeleteVideo={handleDeleteVideo}
           />
         );
       })}
