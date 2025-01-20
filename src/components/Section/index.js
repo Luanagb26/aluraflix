@@ -2,7 +2,7 @@ import Card from "../Card";
 import "./Section.css";
 
 const Section = ({ nome, cor, videos, onDeleteVideo, onEditVideo }) => {
-  console.log(`Section: ${nome}`, videos); // Verificar os vídeos recebidos
+
   return (
     <section className="section">
       <h3 style={{ backgroundColor: cor }}>{nome}</h3>

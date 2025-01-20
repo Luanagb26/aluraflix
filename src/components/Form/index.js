@@ -4,7 +4,7 @@ import TextArea from "../TextArea";
 import Select from "../Select"
 import { useEffect, useState } from 'react';
 import FormButton from '../FormButton';
-import updateVideo from '../../js/updateVideo';
+import {connectApi} from '../../js/connectApi';
 
 const Form = ({ video, onSubmit }) => {
 
@@ -28,6 +28,11 @@ const Form = ({ video, onSubmit }) => {
         event.preventDefault();
         onSubmit({ id: video.id, titulo, categoria, imagem, url, descricao });
     };
+
+    const handleClean = () => {
+        connectApi.cleanForm(setTitulo, setCategoria, setImagem, setUrl, setDescricao);
+      };
+
     return (
 
         <form onSubmit={handleSubmit}>
@@ -83,7 +88,7 @@ const Form = ({ video, onSubmit }) => {
 
             <div className='formulario__botao__container'>
                 <FormButton type="submit" nome="GUARDAR" />
-                <FormButton nome="LIMPAR" />
+                <FormButton nome="LIMPAR" onClick={handleClean} />
             </div>
 
         </form>

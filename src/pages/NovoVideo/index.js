@@ -5,6 +5,7 @@ import './NovoVideo.css';
 import Select from '../../components/Select';
 import { useState } from 'react';
 import createVideo from '../../js/createVideo';
+import { connectApi } from '../../js/connectApi';
 
 export default function NovoVideo() {
     const [titulo, setTitulo] = useState('');
@@ -15,14 +16,15 @@ export default function NovoVideo() {
     
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log("Título:", titulo);
-        console.log("Categoria:", categoria);
-        console.log("Imagem:", imagem);
-        console.log("URL:", url);
-        console.log("Descrição:", descricao);
         
         createVideo(titulo, categoria, imagem, url, descricao);
     };
+
+     const handleClean = () => {
+            connectApi.cleanForm(setTitulo, setCategoria, setImagem, setUrl, setDescricao);
+          };
+    
+
         return (
             <main>
                 <div className='titulo__container'>
@@ -79,7 +81,7 @@ export default function NovoVideo() {
                     </div>
                     <div className='formulario__botao__container'>
                         <FormButton type="submit" nome="GUARDAR" />
-                        <FormButton nome="LIMPAR" />
+                        <FormButton nome="LIMPAR" onClick={handleClean}/>
                     </div>
                 </form>
             </main>

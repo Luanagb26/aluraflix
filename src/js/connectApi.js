@@ -62,13 +62,6 @@ async function deleteVideo(id) {
     }
 }
 
-async function cleanForm(titulo, imagem, url, categoria, descricao) {
-    const connection = await fetch("http://localhost:3000/videos")
-    const convertedConnection = await connection.json();
-    return convertedConnection;
-
-}
-
 async function updateVideo(id,titulo, categoria, url, imagem , descricao) {
     try {
         console.log(titulo)
@@ -99,10 +92,18 @@ async function updateVideo(id,titulo, categoria, url, imagem , descricao) {
       }
 }
 
+async function cleanForm(setTitulo, setCategoria, setImagem, setUrl, setDescricao) {
+    setTitulo("");
+    setCategoria("");
+    setImagem("");
+    setUrl("");
+    setDescricao("");
+  }
+
 export const connectApi = {
     listVideos,
     createVideo,
     deleteVideo,
-    cleanForm,
     updateVideo,
+    cleanForm
 }
