@@ -3,16 +3,17 @@ import Footer from '../../components/Footer'
 import Modal from '../../components/Modal';
 import Section from '../../components/Section';
 import { useState } from 'react';
-import db from '../../json/db.json';
 import { categorias } from '../../context/categorias';
 import { useEffect } from 'react';
 import { connectApi } from "../../js/connectApi";
+import deleteVideo from '../../js/deleteVideo';
 
 export default function Home() {
 
   const [videos, setVideos] = useState([]);
+  const [selectedVideo, setSelectedVideo] = useState(null); // Vídeo selecionado para edição
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  
   useEffect(() => {
     async function fetchVideos() {
       const response = await connectApi.listVideos();
@@ -23,12 +24,31 @@ export default function Home() {
   }, []);
 
   const handleDeleteVideo = async (id) => {
-    await connectApi.deleteVideo(id);
+    await deleteVideo(id);
 
-       // Atualiza o estado local removendo o vídeo deletado
-       setVideos((prevVideos) => prevVideos.filter((video) => video.id !== id));
-      };
-      
+    // Atualiza o estado local removendo o vídeo deletado
+    setVideos((prevVideos) => prevVideos.filter((video) => video.id !== id));
+  };
+
+  const handleUpdateSuccess = (updatedVideo) => {
+    setVideos((prevVideos) =>
+      prevVideos.map((video) =>
+        video.id === updatedVideo.id ? updatedVideo : video
+      )
+    );
+  };
+
+  const openEditModal = (video) => {
+    setSelectedVideo(video);
+    setIsModalOpen(true);
+  };
+
+  const closeEditModal = () => {
+    setSelectedVideo(null);
+    setIsModalOpen(false);
+  };
+
+
   return (
     <div className="App">
       <Banner
@@ -50,12 +70,18 @@ export default function Home() {
             cor={categoria.cor}
             videos={videosFiltrados}
             onDeleteVideo={handleDeleteVideo}
+            onEditVideo={openEditModal}
           />
         );
       })}
 
       <Footer />
-      <Modal />
+      <Modal 
+       video={selectedVideo}
+       open={isModalOpen}
+       onClose={closeEditModal}
+       onUpdateSuccess={handleUpdateSuccess}
+      />
     </div>
   );
 }

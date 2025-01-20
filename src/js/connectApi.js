@@ -69,10 +69,11 @@ async function cleanForm(titulo, imagem, url, categoria, descricao) {
 
 }
 
-async function updateVideo(id,titulo, imagem, url, categoria, descricao) {
+async function updateVideo(id,titulo, categoria, url, imagem , descricao) {
     try {
+        console.log(titulo)
         const response = await fetch(`http://localhost:3000/videos/${id}`, {
-          method: "PUT", // Use PATCH se quiser alterar apenas alguns campos.
+          method: "PUT",
           headers: {
             "Content-Type": "application/json",
           },
@@ -86,11 +87,12 @@ async function updateVideo(id,titulo, imagem, url, categoria, descricao) {
         });
     
         if (!response.ok) {
-          throw new Error(`Erro ao atualizar o vídeo com ID ${id}: ${response.status}`);
+            throw new Error("Erro ao atualizar o vídeo. Status: " + response.status);
         }
+        const updatedVideo = await response.json();
+        console.log("Resposta do servidor:", updatedVideo);
+        return updatedVideo;
     
-        console.log(`Vídeo com ID ${id} atualizado com sucesso.`);
-        return await response.json();
       } catch (error) {
         console.error("Erro ao atualizar o vídeo:", error);
         return null;

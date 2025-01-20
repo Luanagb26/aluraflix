@@ -2,8 +2,9 @@ import './Form.css'
 import Input from "../Input";
 import TextArea from "../TextArea";
 import Select from "../Select"
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import FormButton from '../FormButton';
+import updateVideo from '../../js/updateVideo';
 
 const Form = ({ video, onSubmit }) => {
 
@@ -13,6 +14,16 @@ const Form = ({ video, onSubmit }) => {
     const [url, setUrl] = useState(video?.url || "");
     const [descricao, setDescricao] = useState(video?.descricao || "");
 
+    useEffect(() => {
+        if (video) {
+            setTitulo(video.titulo || "");
+            setCategoria(video.categoria || "");
+            setImagem(video.imagem || "");
+            setUrl(video.url || "");
+            setDescricao(video.descricao || "");
+        }
+    }, [video]);
+
     const handleSubmit = (event) => {
         event.preventDefault();
         onSubmit({ id: video.id, titulo, categoria, imagem, url, descricao });
@@ -21,7 +32,7 @@ const Form = ({ video, onSubmit }) => {
 
         <form onSubmit={handleSubmit}>
             <Input
-                placeholder='valorAntigoooo'
+                placeholder=''
                 colorFundo="transparent"
                 colorBorda=" 5px solid rgba(107, 209, 255, 1)"
                 value={titulo}
@@ -31,15 +42,17 @@ const Form = ({ video, onSubmit }) => {
             </Input>
 
             <Select
-                placeholder="selecione uma categoria"
+                placeholder=""
                 colorFundo="transparent"
                 colorBorda=" 5px solid rgba(107, 209, 255, 1)"
+                value={categoria}
+                onChange={(e) => setCategoria(e.target.value)}
             >
                 Categoria
             </Select>
 
             <Input
-                placeholder='valorAntigoooo'
+                placeholder=''
                 colorFundo="transparent"
                 colorBorda=" 5px solid rgba(107, 209, 255, 1)"
                 value={imagem}
@@ -49,7 +62,7 @@ const Form = ({ video, onSubmit }) => {
             </Input>
 
             <Input
-                placeholder='valorAntigoooo'
+                placeholder=''
                 colorFundo="transparent"
                 colorBorda=" 5px solid rgba(107, 209, 255, 1)"
                 value={url}
@@ -59,7 +72,7 @@ const Form = ({ video, onSubmit }) => {
             </Input>
 
             <TextArea
-                placeholder='valorAntigoooo'
+                placeholder=''
                 colorFundo="transparent"
                 colorBorda=" 5px solid rgba(107, 209, 255, 1)"
                 value={descricao}

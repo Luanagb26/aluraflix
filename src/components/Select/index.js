@@ -7,7 +7,6 @@ const Select = ({ value, onChange, children, placeholder,  colorFundo = `rgba(25
             <label className="select__label">{children}</label>
             <select 
             className="select" 
-            defaultValue=""
             required
             style={{backgroundColor: `${colorFundo}`, border: `${colorBorda}`}}
             value={value}

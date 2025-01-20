@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import Modal from '../Modal';
 import './Card.css';
-import deleteVideo from '../../js/deleteVideo.js'
 
-const Card = ({id ,url,cor, onDeleteVideo}) => {
+const Card = ({id ,url,cor, onDeleteVideo, onEditVideo}) => {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -25,7 +24,7 @@ const Card = ({id ,url,cor, onDeleteVideo}) => {
                         <img src='/assets/icon__trash.png' alt='Icone Lixeira' onClick={()=>onDeleteVideo(id)}/>
                         DELETAR
                     </button>
-                    <button className='button__card' onClick={openModal}>
+                    <button className='button__card' onClick={onEditVideo}>
                         <img src='/assets/icon__edit.png' alt='Icone Editar'/>
                         EDITAR
                     </button>
