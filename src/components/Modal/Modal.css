@@ -15,12 +15,11 @@
     background: rgba(3, 18, 47, 1);
     z-index: 11;
 
-    width: 865px;
-    height: 1074px;
+    width: 60.875rem;
+    height: 67.125rem;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 60px;
     gap: 40px;
 
     border: 5px solid rgba(107, 209, 255, 1);
@@ -30,8 +29,23 @@
 
 }
 
+.close__button{
+    background-color: transparent;
+    float: right;
+    border: none;
+    
+}
+
+.close__icon{
+    color: white;
+    width: 3.25rem;
+    height: 3.25rem;
+
+}
+
 .modal__container h1{
-    text-align: center;
+    margin: 2.688rem 12.469rem;
+    text-align: justify;
     color: rgba(34, 113, 209, 1);
     font-weight: 900;
     font-size: 60px;

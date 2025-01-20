@@ -1,4 +1,4 @@
-.select{
+.select__container{
     display: flex;
     flex-direction: column;
     color:rgba(255, 255, 255, 1);
@@ -6,14 +6,14 @@
     font-weight: 600;
     line-height: 24px;
     gap: 0.938rem;
-    margin-bottom: 3.75rem;
+    
 }
 
 .select__label{
     font-family: 'Source Sans 3', serif;
 }
 
-.select select{  
+.select{  
     max-width: 100%;
     height: 4.45rem;
     border-radius: 10px;
@@ -23,6 +23,9 @@
     font-size: 20px;
     font-weight: 600;
     line-height: 24px;
+}
+.select option{
+    background-color: rgba(3, 18, 47, 1);
 }
 
 

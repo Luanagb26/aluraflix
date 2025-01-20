@@ -1,0 +1,17 @@
+form{
+   margin: 0rem 12.469rem; 
+    justify-content: space-between;
+}
+
+form Input{
+    margin-bottom: 2.688rem;
+}
+
+form Select{
+    margin-bottom: 2.688rem;
+}
+
+
+.formulario__botao__container{
+    justify-content: space-between;
+}
