@@ -4,6 +4,15 @@
     padding: 20px 0;
 }
 
+.empty-message{
+    text-align: center;
+    font-family: 'Source Sans 3', serif;
+    color:rgba(255, 255, 255, 1);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
 .section h3 {
     position: relative;
     z-index: 10;
@@ -22,49 +31,95 @@
 
 .video__container {
     display: flex;
-    overflow-y: hidden;
-    overflow-x: auto;
     width: 100%;
     position: relative;
     padding-bottom: 2.5rem;
 }
 
-
-.video__container::-webkit-scrollbar {
-    border-radius: 10px; /* Arredondamento da barra de rolagem */
-    
-}
-  
-  .video__container::-webkit-scrollbar-thumb {
-    background-color: rgba(34, 113, 209, 1); /* Cor da barrinha de rolagem */
-    border-radius: 10px; /* Arredondamento da barrinha */
-    
-}
-  
-  .video__container::-webkit-scrollbar-track {
-    border-radius: 10px; /* Arredondamento do trilho */
-    background-color: rgba(34, 113, 209, 0.17);
-    
-  }
-
-
-.slick-slide {
+.section .slick-slide {
     display: flex;
     justify-content: center;
-    width: 33.33%;
+    margin-right: 2.5rem;
+    width: calc(100% / 3) !important;
 
 }
 
 .section .slick-track {
     display: flex;
     margin: 0;
-    
-
 }
 
 .section .slick-list {
     width: 84.771rem;
     height: 20.8rem;
+    overflow-y: hidden;
+    overflow-x: auto;
     margin: 0 auto;
-   
+    padding-bottom: 2.5rem;
+}
+
+.section .slick-list::-webkit-scrollbar {
+    scrollbar-width: thin;
+    border-radius: 10px; /* Arredondamento da barra de rolagem */
+    
+}
+  
+.section .slick-list::-webkit-scrollbar-thumb {
+    background-color: rgba(34, 113, 209, 1); /* Cor da barrinha de rolagem */
+    border-radius: 10px; /* Arredondamento da barrinha */
+    height: 13.188rem;;
+}
+  
+.section .slick-list::-webkit-scrollbar-track {
+    border-radius: 10px; /* Arredondamento do trilho */
+    background-color: rgba(34, 113, 209, 0.17);
+    
+}
+
+@media (max-width: 1024px){
+
+    .section{
+        justify-items: center;
+        width: auto;
+    }
+    .video__container{
+        width: 55.89rem;
+    }
+    .section .slick-slide {
+        width: calc(100% / 2) !important;
+    }
+    .section .slick-list {
+        width: 55.89rem;
+    }
+
+
+}
+
+@media (min-width:430px) and (max-width:768px){
+    .section{
+        justify-items: left;
+        justify-self: center;
+        width: auto;
+        height: 29.719rem;
+        margin-bottom: 5.813rem;
+    }
+    .section h3{
+        z-index: 9;
+        width: 17.875rem;
+        
+    }
+    .video__container{
+        width: auto;
+    }
+
+    .section .slick-slide {
+        width: calc(100% / 1) !important;
+        
+    }
+    .section .slick-list {
+        width: 28rem;
+        
+    }
+
+
 }

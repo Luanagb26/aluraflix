@@ -1,8 +1,11 @@
 import './Button.css'
 
-const Button = (props) => {
+const Button = ({nome, isActive ,children}) => {
     return(
-            < button className={`button ${props.isActive ? 'button--active' : ''}`}>{props.nome}</button>
+            < button className={`button ${isActive ? 'button--active' : ''}`}>
+                {children}
+                <p>{nome}</p>
+            </button>
     )
 }
 

@@ -24,10 +24,10 @@ export default function Home() {
   }, []);
 
   const handleDeleteVideo = async (id) => {
-    await deleteVideo(id);
+    const deletCall = await deleteVideo(id);
+     
+        setVideos((prevVideos) => prevVideos.filter((video) => video.id !== id));
 
-    // Atualiza o estado local removendo o vídeo deletado
-    setVideos((prevVideos) => prevVideos.filter((video) => video.id !== id));
   };
 
   const handleUpdateSuccess = (updatedVideo) => {

@@ -28,3 +28,20 @@
     line-height: 24px;
 
 }
+
+@media (max-width: 1024px){
+
+    .textArea{
+        height: 9.688rem;
+    }
+
+ }
+
+
+@media (min-width:430px) and (max-width:768px){
+    
+    .textArea{
+        height: 9.688rem;
+    }
+
+}

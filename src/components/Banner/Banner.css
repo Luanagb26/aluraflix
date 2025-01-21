@@ -67,3 +67,22 @@
    height: 100%;
    z-index: 1;
 }
+
+@media (max-width: 1024px){
+
+    .banner__content{
+        width: 29.02rem;
+    }
+
+    .banner__player{
+        width: 28.282rem
+    }
+}
+
+@media (min-width:430px) and (max-width:768px){
+    .banner{
+        display: none;
+    }
+
+
+}

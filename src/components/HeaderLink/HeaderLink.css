@@ -7,3 +7,29 @@
     text-decoration: none;
 
 }
+
+.icon-home{
+    display: none;
+    width: 2.813rem;
+    height: 2.813rem;
+    top: 6.13px;
+    left: 6.49px;
+}
+
+.icon-add{
+    display: none;
+    width: 2.813rem;
+    height: 2.813rem;
+    top: 6.13px;
+    left: 6.49px;
+}
+
+@media (min-width:430px) and (max-width:768px){
+    
+    .icon-home{
+        display: block;
+    }
+    .icon-add{
+        display: block;
+    }
+}

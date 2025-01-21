@@ -15,3 +15,11 @@
     width: 10.528rem;
     height: 2.5rem;
 }
+
+@media (min-width:430px) and (max-width:768px) {
+
+    .footer{
+        display: none;
+    }
+
+}

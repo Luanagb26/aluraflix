@@ -41,3 +41,11 @@
 .button__container button img{
     margin-right: 0.281rem;
 }
+
+@media (min-width:430px) and (max-width:768px){
+    
+    .card{
+        width: 23.339rem;
+    }
+
+}

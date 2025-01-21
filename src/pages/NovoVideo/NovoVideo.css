@@ -2,6 +2,7 @@ main{
    display: flex;
    flex-direction: column;
    justify-self: center;
+
 }
 
 .titulo__container{
@@ -22,7 +23,7 @@ main{
     line-height: 1.465rem;
 
 }
-npm
+
 .formulario__novoVideo{
     color:rgba(255, 255, 255, 1);
 }
@@ -55,5 +56,37 @@ npm
 
 .formulario__botao__container{
     display: flex;
+    justify-content: left;
     gap: 30px;
+}
+
+@media (max-width: 1024px){
+    main{
+        width: 95%;
+    }
+    .formulario__novoVideo{
+        margin: 0rem 3.125rem ;
+    }
+    .formulario__campo__container{
+        width: 100%;
+    }
+ }
+
+@media (min-width:430px) and (max-width:768px){
+    
+    .formulario__novoVideo{
+        margin: 0rem 3.125rem ;
+    }
+    
+    .formulario__campo__container{
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    .formulario__botao__container{
+        justify-self: center;
+        flex-direction: column;
+        margin-bottom: 10rem;
+    }
+
 }

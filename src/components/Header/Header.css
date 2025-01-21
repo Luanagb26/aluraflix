@@ -31,3 +31,22 @@
 }
 
 
+@media (min-width:430px) and (max-width:768px){
+    
+    .header{
+        position: fixed;
+        bottom: 0px;
+        background-color: rgba(0, 0, 0, 0.9);        ;
+        border-top: 4px solid var(--Blue, rgba(34, 113, 209, 1));
+        border-bottom: none;
+    }
+
+    .header__container{
+        justify-content: center;
+    }
+
+    .header__logo{
+        display: none;
+    }
+
+}

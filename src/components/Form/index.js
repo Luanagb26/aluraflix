@@ -39,7 +39,7 @@ const Form = ({ video, onSubmit }) => {
             <Input
                 placeholder=''
                 colorFundo="transparent"
-                colorBorda=" 5px solid rgba(107, 209, 255, 1)"
+                colorBorda=" 5px solid rgba(34, 113, 209, 1)"
                 value={titulo}
                 onChange={(e) => setTitulo(e.target.value)}
             >
@@ -49,7 +49,7 @@ const Form = ({ video, onSubmit }) => {
             <Select
                 placeholder=""
                 colorFundo="transparent"
-                colorBorda=" 5px solid rgba(107, 209, 255, 1)"
+                colorBorda=" 5px solid rgba(34, 113, 209, 1)"
                 value={categoria}
                 onChange={(e) => setCategoria(e.target.value)}
             >
@@ -59,7 +59,7 @@ const Form = ({ video, onSubmit }) => {
             <Input
                 placeholder=''
                 colorFundo="transparent"
-                colorBorda=" 5px solid rgba(107, 209, 255, 1)"
+                colorBorda=" 5px solid rgba(34, 113, 209, 1)"
                 value={imagem}
                 onChange={(e) => setImagem(e.target.value)}
             >
@@ -69,7 +69,7 @@ const Form = ({ video, onSubmit }) => {
             <Input
                 placeholder=''
                 colorFundo="transparent"
-                colorBorda=" 5px solid rgba(107, 209, 255, 1)"
+                colorBorda=" 5px solid rgba(34, 113, 209, 1)"
                 value={url}
                 onChange={(e) => setUrl(e.target.value)}
             >
@@ -79,7 +79,7 @@ const Form = ({ video, onSubmit }) => {
             <TextArea
                 placeholder=''
                 colorFundo="transparent"
-                colorBorda=" 5px solid rgba(107, 209, 255, 1)"
+                colorBorda=" 5px solid rgba(34, 113, 209, 1)"
                 value={descricao}
                 onChange={(e) => setDescricao(e.target.value)}
             >

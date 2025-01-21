@@ -1,5 +1,26 @@
-
 .button {
+    color: rgba(255, 255, 255, 1);
+    border: 2px solid rgba(255, 255, 255, 1);
+    box-shadow: none;
+    background-color: transparent;
+    width: 11.258rem;
+    height: 3.375rem;
+    border-radius: 10px;
+
+    font-family: "Source Sans 3", serif;
+    font-weight: 900;
+    font-size: 20px;
+    text-align: center;
+    align-content: center;
+
+}
+
+.button p{
+    margin: 0;
+}
+
+.button--active {
+
     font-family: "Source Sans 3", serif;
     font-weight: 900;
     font-size: 20px;
@@ -8,15 +29,50 @@
     width: 11.258rem;
     height: 3.375rem;
     background-color: transparent;
-    color:var(--Blue, rgba(34, 113, 209, 1));
+    color: var(--Blue, rgba(34, 113, 209, 1));
     border: 2px solid var(--Blue, rgba(34, 113, 209, 1));
     border-radius: 10px;
     box-shadow: 0px 0px 12px 4px rgba(34, 113, 209, 1) inset;
 
 }
 
-.button--active{
-    color:rgba(255, 255, 255, 1);
-    border: 2px solid rgba(255, 255, 255, 1);
-    box-shadow: none
+@media (min-width:430px) and (max-width:768px) {
+
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        color: rgba(255, 255, 255, 1);
+        width: 154.83px;
+        height: 54px;
+        text-wrap: nowrap;
+        border: none;
+        cursor: pointer;
+      }
+
+    .button p{
+        display: none;
+    }
+    
+    .button--active {
+        background: rgba(34, 113, 209, 0.24);
+        color: rgba(34, 113, 209, 1);
+        width: auto;
+        height: 54px;
+        padding: 20px;
+        border-radius: 50px;
+        box-shadow: none;
+        border: 2px solid  rgba(34, 113, 209, 1);
+        
+    }
+
+    .button--active p{
+        display: block;
+    }
+
+   
+
+   
+
 }
