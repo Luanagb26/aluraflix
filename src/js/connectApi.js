@@ -52,7 +52,6 @@ async function deleteVideo(id) {
         if (!connection.ok) {
             throw new Error(`Não foi possível deletar o vídeo com ID ${id}: ${connection.status}`);
         }
-        console.log(`Vídeo com ID ${id} deletado com sucesso do servidor.`);
         return true; // Sucesso
     
 
@@ -64,7 +63,6 @@ async function deleteVideo(id) {
 
 async function updateVideo(id,titulo, categoria, url, imagem , descricao) {
     try {
-        console.log(titulo)
         const response = await fetch(`http://localhost:3000/videos/${id}`, {
           method: "PUT",
           headers: {
@@ -83,7 +81,6 @@ async function updateVideo(id,titulo, categoria, url, imagem , descricao) {
             throw new Error("Erro ao atualizar o vídeo. Status: " + response.status);
         }
         const updatedVideo = await response.json();
-        console.log("Resposta do servidor:", updatedVideo);
         return updatedVideo;
     
       } catch (error) {

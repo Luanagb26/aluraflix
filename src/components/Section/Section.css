@@ -1,23 +1,70 @@
-.section{
-    
+.section {
+    width: 100%;
+    margin-left: 2.625rem;
+    padding: 20px 0;
 }
 
-.section h3{
+.section h3 {
     position: relative;
     z-index: 10;
     width: 27rem;
     height: 4.375rem;
     border-radius: 15px;
-    
+
     align-content: center;
     text-align: center;
-    font-family: 'Roboto',serif;
+    font-family: 'Roboto', serif;
     font-size: 32px;
     font-weight: 800;
     color: rgba(245, 245, 245, 1);
 }
 
-.video__container{
+
+.video__container {
     display: flex;
+    overflow-y: hidden;
+    overflow-x: auto;
+    width: 100%;
+    position: relative;
+    padding-bottom: 2.5rem;
+}
+
+
+.video__container::-webkit-scrollbar {
+    border-radius: 10px; /* Arredondamento da barra de rolagem */
     
+}
+  
+  .video__container::-webkit-scrollbar-thumb {
+    background-color: rgba(34, 113, 209, 1); /* Cor da barrinha de rolagem */
+    border-radius: 10px; /* Arredondamento da barrinha */
+    
+}
+  
+  .video__container::-webkit-scrollbar-track {
+    border-radius: 10px; /* Arredondamento do trilho */
+    background-color: rgba(34, 113, 209, 0.17);
+    
+  }
+
+
+.slick-slide {
+    display: flex;
+    justify-content: center;
+    width: 33.33%;
+
+}
+
+.section .slick-track {
+    display: flex;
+    margin: 0;
+    
+
+}
+
+.section .slick-list {
+    width: 84.771rem;
+    height: 20.8rem;
+    margin: 0 auto;
+   
 }
