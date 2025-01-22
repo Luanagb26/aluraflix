@@ -1,6 +1,7 @@
 .section {
     width: 100%;
     margin-left: 2.625rem;
+    margin-right: 2.625rem;
     padding: 20px 0;
 }
 
@@ -90,6 +91,9 @@
     }
     .section .slick-list {
         width: 55.89rem;
+    }
+    .section .slick-track{
+ 
     }
 
 
