@@ -9,7 +9,8 @@ Este foi um projeto desenvolvido dentro do programa de educação tecnológica _
 
   
 ## 🔗 Link
-aluraflix-q79zpfiv3-luanagb26s-projects.vercel.app
+### https://aluraflix-one-inky.vercel.app/
+
 
 ## ⚙️ Tecnologias utilizadas
 
