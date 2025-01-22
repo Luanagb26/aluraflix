@@ -1,7 +1,7 @@
 
 async function listVideos() {
     try {
-        const connection = await fetch("https://my-json-server.typicode.com/Luanagb26/aluraflix-api/videos");
+        const connection = await fetch("http://localhost:3000/videos");
         if (!connection.ok) {
             throw new Error(`Erro na requisição: ${connection.status}`);
         }
